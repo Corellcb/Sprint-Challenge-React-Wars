@@ -7,6 +7,7 @@ const CardDiv = styled.div`
     padding: 2%;
     margin: 2% 0;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px;
     opacity: 75%;
 `
 

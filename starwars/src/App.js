@@ -15,6 +15,21 @@ const CharacterCards = styled.h2`
   padding: 2% 0;
 `
 
+const ButtonDiv = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+`
+
+const Buttons = styled.button`
+  width: 40%;
+  padding: 2% 5%;
+  margin: 2% auto 10%;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px;
+`
+
 let page = 1;
 
 const App = () => {
@@ -57,7 +72,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <h2>Character Cards</h2>
+      <CharacterCards>Character Cards</CharacterCards>
       <CharDiv>
         {people.map((e, index) => {
           return (
@@ -65,10 +80,10 @@ const App = () => {
           )
         })}
       </CharDiv>
-      <div>
-        <button onClick={() => previous()}>Previous</button>
-        <button onClick={() => next()}>Next</button>
-      </div>
+      <ButtonDiv>
+        <Buttons onClick={() => previous()}>Previous</Buttons>
+        <Buttons onClick={() => next()}>Next</Buttons>
+      </ButtonDiv>
     </div>
   );
 }
